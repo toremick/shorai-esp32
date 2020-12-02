@@ -8,6 +8,10 @@ esp32 connected to shorai heat pump
 
 ### Parts list
 
- Markup : * ESP32-DevKitC V4
-          * Optocoupler ![EL817A](https://www.ebay.com/itm/Straight-Plug-Optocoupler-EL817-A-B-C-D-F-DIP-4-Compatible-PC817-Isolator/253795050804?hash=item3b175d2534:g:LjcAAOSwXVNbY~z3)
-
+* 1 x ESP32-DevKitC
+* 2 x Optocoupler ![EL817A](https://www.ebay.com/itm/Straight-Plug-Optocoupler-EL817-A-B-C-D-F-DIP-4-Compatible-PC817-Isolator/253795050804?hash=item3b175d2534:g:LjcAAOSwXVNbY~z3)
+* 4 x 0.25w 1K resistors
+* 1 x 0.25w 470R resistor
+* 1 x 0.25w 10K resistor
+* 2 x 100uF (11mmx5mm) Capacitor 
+* and 2.54mm header pins and sockets
