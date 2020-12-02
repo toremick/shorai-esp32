@@ -3,7 +3,7 @@ esp32 connected to shorai heat pump
 
 This works great for me, but is at your own risk!
 
-Hit me up on ![Discord](https://discord.gg/wF8QsGe74s) if there is anything
+Hit me up on (https://discord.gg/wF8QsGe74s) if there is anything
 i can help with
 
 ### PCB Schematic
@@ -17,7 +17,7 @@ U5 is a jumper, close the jumper to be powered from the heatpump. Remove jumper 
 ### Parts list
 
 * 1 x ESP32-DevKitC
-* 2 x Optocoupler ![EL817A](https://www.ebay.com/itm/Straight-Plug-Optocoupler-EL817-A-B-C-D-F-DIP-4-Compatible-PC817-Isolator/253795050804?hash=item3b175d2534:g:LjcAAOSwXVNbY~z3)
+* 2 x Optocoupler (https://www.ebay.com/itm/Straight-Plug-Optocoupler-EL817-A-B-C-D-F-DIP-4-Compatible-PC817-Isolator/253795050804?hash=item3b175d2534:g:LjcAAOSwXVNbY~z3)
 * 4 x 0.25w 1K resistors
 * 1 x 0.25w 470R resistor
 * 1 x 0.25w 10K resistor
