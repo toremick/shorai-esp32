@@ -1,5 +1,9 @@
 # shorai-esp32
 esp32 connected to shorai heat pump
+
+This works great for me, but is at your own risk!
+
+
 ### PCB Schematic
 ![PCB Schematic](images/schematic.PNG?raw=true "PCB Schematic")
 
