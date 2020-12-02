@@ -3,6 +3,8 @@ esp32 connected to shorai heat pump
 
 This works great for me, but is at your own risk!
 
+Hit me up on ![Discord](https://discord.gg/wF8QsGe74s) if there is anything
+i can help with
 
 ### PCB Schematic
 ![PCB Schematic](images/schematic.PNG?raw=true "PCB Schematic")
