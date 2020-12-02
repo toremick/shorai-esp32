@@ -5,6 +5,8 @@ esp32 connected to shorai heat pump
 
 ### PCB Layout
 ![PCB layout](images/pcb.PNG?raw=true "PCB layout")
+U5 is a jumper, close the jumper to be powered from the heatpump. Remove jumper when powered from usb.
+
 
 ### Parts list
 
