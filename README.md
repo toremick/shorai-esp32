@@ -22,7 +22,7 @@ U5 is a jumper, close the jumper to be powered from the heatpump. Remove jumper 
 * 1 x 0.25w 470R resistor
 * 1 x 0.25w 10K resistor
 * 1 x 0.25w 220R resistor
-* 2 x 100uF (11mmx5mm) Capacitor 
+* 1 x 100uF (11mmx5mm) Capacitor 
 * 1 x S05B-PASK-2 (header for connection cable)
 * and 2.54mm header pins and sockets
 
