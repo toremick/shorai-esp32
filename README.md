@@ -65,3 +65,20 @@ climate:
     temp_step: 1
     precision: 1
 ```
+
+
+### Add following to automations.yaml or where you have your automations
+(this will query the heatpump for all values so HA will have current state
+for everything)
+
+``` 
+- id: gethpvalues_on_startup 
+  alias: "HP states on HA start-up" 
+  trigger:
+    platform: homeassistant
+    event: start
+  action: 
+  - service: mqtt.publish 
+    data: topic: varmepumpe/doinit
+    payload: startup-ha
+```
