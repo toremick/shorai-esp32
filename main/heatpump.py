@@ -140,7 +140,7 @@ async def conn_han(client):
     for i in topics:
         await client.subscribe(i,1)
         
-# first run to collect values
+# first run to collect values and run watchdog
 async def firstrun(client):
     firstrun = False
     await asyncio.sleep(10)
