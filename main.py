@@ -1,5 +1,5 @@
-import ConnectWiFi
-ConnectWiFi.connect()
+#import ConnectWiFi
+#ConnectWiFi.connect()
 
 def start():
     from main import inithp
