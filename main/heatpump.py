@@ -191,12 +191,28 @@ async def receiver(client):
                             outdoortemp = int_to_signed(int(data[15]))
                             await client.publish('heatpump/outdoortemp', str(outdoortemp), qos=1)
                     elif len(data) == 15:
+                        if(str(data[12]) == "187"):
+                            roomtemp = int_to_signed(int(data[13]))
+                            await client.publish('heatpump/roomtemp', str(roomtemp), qos=1)
+                        if(str(data[12]) == "179"):
+                            setpoint = int(data[13])
+                            await client.publish('heatpump/setpoint/state', str(setpoint), qos=1)
+                        if(str(data[12]) == "128"):
+                            state = hpfuncs.inttostate[int(data[13])]
+                            await client.publish('heatpump/state/state', str(state), qos=1)
+                        if(str(data[12]) == "160"):
+                            fanmode = hpfuncs.inttofanmode[int(data[13])]
+                            await client.publish('heatpump/fanmode/state', str(fanmode), qos=1)
+                        if(str(data[12]) == "163"):
+                            swingmode = hpfuncs.inttoswing[int(data[13])]
+                            await client.publish('heatpump/swingmode/state', str(swingmode), qos=1)
+                        if(str(data[12]) == "176"):
+                            mode = hpfuncs.inttomode[int(data[13])]
+                            await client.publish('heatpump/mode/state', str(mode), qos=1) 
                         if(str(data[12]) == "190"):
                             outdoortemp = int_to_signed(int(data[13]))
                             await client.publish('heatpump/outdoortemp', str(outdoortemp), qos=1)
-                        elif(str(data[12]) == "187"):
-                            roomtemp = int_to_signed(int(data[13]))
-                            await client.publish('heatpump/roomtemp', str(roomtemp), qos=1)        
+     
     except Exception as e:
         hpfuncs.logprint(e)
 
