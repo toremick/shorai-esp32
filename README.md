@@ -64,6 +64,7 @@ climate:
     swing_mode_state_topic: "heatpump/swingmode/state"
     temp_step: 1
     precision: 1
+    
 ```
 
 
@@ -79,6 +80,7 @@ for everything)
     event: start
   action: 
   - service: mqtt.publish 
-    data: topic: varmepumpe/doinit
+    data: topic: heatpump/doinit
     payload: startup-ha
+    
 ```
