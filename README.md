@@ -80,7 +80,8 @@ for everything)
     event: start
   action: 
   - service: mqtt.publish 
-    data: topic: heatpump/doinit
-    payload: startup-ha
+    data: 
+      topic: heatpump/doinit
+      payload: startup-ha
     
 ```
