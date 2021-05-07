@@ -25,7 +25,7 @@ Files for PCB (and possible to order): https://oshwlab.com/toremick/toshiba-ac-h
 
 ### Parts list
 
-* 1 x ESP32-DevKitC
+* 1 x ESP32-DevKitC v4 (38 pins)
 * 2 x EL817A Optocoupler (https://www.ebay.com/itm/Straight-Plug-Optocoupler-EL817-A-B-C-D-F-DIP-4-Compatible-PC817-Isolator/253795050804?hash=item3b175d2534:g:LjcAAOSwXVNbY~z3)
 * 4 x 0.25w 1K resistors
 * 1 x 0.25w 470R resistor
