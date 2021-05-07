@@ -13,15 +13,15 @@ i can help with
 ![PCB layout](images/pcb.PNG?raw=true "PCB layout")
 U5 is a jumper, close the jumper to be powered from the heatpump. Remove jumper when powered from usb.
 
-R1: 220R
-R2: 470R
-R3: 10K
-R7,R8,R9,R19: 1K
-U1,U2: 817A (Optocouplers)
-C1: 100uF
-U5: When connected with a Jumper, the pcb is powered from the AC (can be soldered)
+R1: 220R  
+R2: 470R  
+R3: 10K  
+R7,R8,R9,R19: 1K  
+U1,U2: 817A (Optocouplers)  
+C1: 100uF  
+U5: When connected with a Jumper, the pcb is powered from the AC (can be soldered)  
 
-Files for PCB (and possible to order): https://oshwlab.com/toremick/toshiba-ac-heatpump-mqtt
+Files for PCB (and possible to order): https://oshwlab.com/toremick/toshiba-ac-heatpump-mqtt  
 
 ### Parts list
 
