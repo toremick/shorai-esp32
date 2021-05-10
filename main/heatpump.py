@@ -175,7 +175,7 @@ async def receiver(client):
                 chunks = chunkifyarray(readable)
                 for data in chunks:
                     hpfuncs.logprint(data)
-                    await client.publish('heatpump/debug/fullstring', str(data))
+                    await client.publish(config['maintopic'] + '/debug/fullstring', str(data))
                     if len(data) == 17:
                         if(str(data[14]) == "187"):
                             roomtemp = int_to_signed(int(data[15]))
