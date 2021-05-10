@@ -1,5 +1,5 @@
 # shorai-esp32
-esp32 connected to shorai heat pump
+This will work for Toshiba Shorai and Seiya
 
 This works great for me, but is at your own risk!
 
@@ -42,10 +42,13 @@ JST, PA Female Connector Housing, 2mm Pitch, 5 Way, 1 Row (https://no.rs-online.
 JST, PA Female Crimp Connector Housing SPAL-001T-P0.5 (https://no.rs-online.com/web/p/crimp-contacts/1630376/)
 JST, PA, PBV, PHD Female Crimp Terminal Contact 22AWG SPHD-001T-P0.5 (https://no.rs-online.com/web/p/crimp-contacts/6881381/)
 
-This can be skipped if you are solder the capacitor on the solder side laying flat.
+This can be skipped if you are solder the capacitor on the solder side laying flat. This way it will fit inside the AC unit
 
-![PCB solder](images/pcb solder.PNG?raw=true "PCB Solder")
- 
+![PCB solder](images/pcb_solder.png?raw=true "PCB Solder")
+![PCB cover](images/pcb_cover.png?raw=true "PCB Cover")
+
+
+
 ### Home assistant Climate config part
 
 ```
