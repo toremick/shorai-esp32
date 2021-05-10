@@ -9,6 +9,7 @@ from config import config
 import time
 from time import sleep
 import machine
+power_state = 'OFF'
 
 
 
@@ -34,6 +35,7 @@ def int_to_signed(intval):
 
 #mqtt stuff
 def sub_cb(topic, msg, retained):
+    global power_state
     runwrite = True
     hpfuncs.logprint(str(topic) + " -- " + str(msg))
 ################################################ 
@@ -76,7 +78,12 @@ def sub_cb(topic, msg, retained):
 # mode
     elif topic == topic_sub_mode:
         try:
-            values = hpfuncs.modeControl(msg)
+            if power_state != 'ON':
+                onmsg = 'ON'
+                values = hpfuncs.stateControl(onmsg.encode("utf-8"))
+                values = values + hpfuncs.modeControl(msg)
+            else:
+                values = hpfuncs.modeControl(msg)
             if values == False:
                 runwrite = False
         except Exception as e:
@@ -154,6 +161,7 @@ async def firstrun(client):
         hpfuncs.logprint("running watchdog..")
 
 async def receiver(client):
+    global power_state
     
     sreader = asyncio.StreamReader(uart)
     try:
@@ -167,7 +175,7 @@ async def receiver(client):
                 chunks = chunkifyarray(readable)
                 for data in chunks:
                     hpfuncs.logprint(data)
-                    await client.publish('heatpump/debug/fullstring', str(data))
+                    await client.publish(config['maintopic'] + '/debug/fullstring', str(data))
                     if len(data) == 17:
                         if(str(data[14]) == "187"):
                             roomtemp = int_to_signed(int(data[15]))
@@ -177,6 +185,7 @@ async def receiver(client):
                             await client.publish(config['maintopic'] + '/setpoint/state', str(setpoint), qos=1)
                         if(str(data[14]) == "128"):
                             state = hpfuncs.inttostate[int(data[15])]
+                            power_state = state
                             await client.publish(config['maintopic'] + '/state/state', str(state), qos=1)
                         if(str(data[14]) == "160"):
                             fanmode = hpfuncs.inttofanmode[int(data[15])]
@@ -199,6 +208,7 @@ async def receiver(client):
                             await client.publish(config['maintopic'] + '/setpoint/state', str(setpoint), qos=1)
                         if(str(data[12]) == "128"):
                             state = hpfuncs.inttostate[int(data[13])]
+                            power_state = state
                             await client.publish(config['maintopic'] + '/state/state', str(state), qos=1)
                         if(str(data[12]) == "160"):
                             fanmode = hpfuncs.inttofanmode[int(data[13])]
