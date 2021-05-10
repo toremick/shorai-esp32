@@ -110,8 +110,10 @@ for everything)
 ```
 
 and
+
+### A automation that switch the Heatpump on when a mode is selected
 ```
-alias: Heatpump on/off when a mode is selected
+alias: Heatpump on when a mode is selected
 description: ''
 trigger:
   - platform: mqtt
