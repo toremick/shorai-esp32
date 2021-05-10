@@ -35,7 +35,16 @@ Files for PCB (and possible to order): https://oshwlab.com/toremick/toshiba-ac-h
 * 1 x S05B-PASK-2 (header for connection cable)
 * and 2.54mm header pins and sockets
 
+### Extra part list for creating a extension cable
 
+JST, PA Female Crimp Connector Housing, 2mm Pitch, 5 Way, 1 Row (https://no.rs-online.com/web/p/wire-housings-plugs/1630360/)
+JST, PA Female Connector Housing, 2mm Pitch, 5 Way, 1 Row (https://no.rs-online.com/web/p/wire-housings-plugs/4766798/)
+JST, PA Female Crimp Connector Housing SPAL-001T-P0.5 (https://no.rs-online.com/web/p/crimp-contacts/1630376/)
+JST, PA, PBV, PHD Female Crimp Terminal Contact 22AWG SPHD-001T-P0.5 (https://no.rs-online.com/web/p/crimp-contacts/6881381/)
+
+This can be skipped if you are solder the capacitor on the solder side laying flat.
+
+ 
 ### Home assistant Climate config part
 
 ```
