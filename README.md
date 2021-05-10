@@ -44,6 +44,7 @@ JST, PA, PBV, PHD Female Crimp Terminal Contact 22AWG SPHD-001T-P0.5 (https://no
 
 This can be skipped if you are solder the capacitor on the solder side laying flat.
 
+![PCB solder](images/pcb solder.PNG?raw=true "PCB Solder")
  
 ### Home assistant Climate config part
 
