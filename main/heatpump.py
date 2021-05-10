@@ -221,7 +221,7 @@ async def receiver(client):
                             await client.publish(config['maintopic'] + '/mode/state', str(mode), qos=1) 
                         if(str(data[12]) == "190"):
                             outdoortemp = int_to_signed(int(data[13]))
-                            await client.publish(config['maintopic'] + '/outdoortemp', str(outdoortemp), qos=1) 1)
+                            await client.publish(config['maintopic'] + '/outdoortemp', str(outdoortemp), qos=1)
      
     except Exception as e:
         hpfuncs.logprint(e)
