@@ -109,26 +109,4 @@ for everything)
     
 ```
 
-### On/Off button
 
-(in configuration.yaml)  
-```
-switch:
-  - platform: mqtt
-    name: "Heatpump onoff"
-    state_topic: "heatpump/state/state"
-    command_topic: "heatpump/state/set"
-```
-
-(add a button card in lovelace with following)  
-```
-entity: switch.heatpump_onoff
-hold_action:
-  action: more-info
-show_icon: true
-show_name: true
-state_color: true
-tap_action:
-  action: toggle
-type: button
-```
