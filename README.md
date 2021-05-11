@@ -109,38 +109,6 @@ for everything)
     
 ```
 
-and
-
-### A automation that switch the Heatpump on when a mode is selected
-```
-alias: Heatpump on when a mode is selected
-description: ''
-trigger:
-  - platform: mqtt
-    topic: heatpump/mode/set
-    payload: auto
-  - platform: mqtt
-    topic: heatpump/mode/set
-    payload: cool
-  - platform: mqtt
-    topic: heatpump/mode/set
-    payload: dry
-  - platform: mqtt
-    topic: heatpump/mode/set
-    payload: fan_only
-  - platform: mqtt
-    topic: heatpump/mode/set
-    payload: heat
-condition: []
-action:
-  - service: mqtt.publish
-    data:
-      topic: heatpump/state/set
-      payload: 'ON'
-mode: single
-```
-
-
 ### On/Off button
 
 (in configuration.yaml)  
