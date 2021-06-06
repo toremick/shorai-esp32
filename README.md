@@ -51,10 +51,14 @@ This can be skipped if you are solder the capacitor on the solder side laying fl
 
 ### Home assistant Climate config part
 
+**Important note:**
+If you have more than one device, please remember to change the *name*, *unique_id* and all the mqtt strings to have unique names. For each device replace the heatpump name with the unique 'maintopic' you have configured in the config.py of your ESP32 device. 
+
 ```
 climate:
   - platform: mqtt
     name: HeatPump
+    icon: mdi:air-conditioner
     unique_id: toshibaheatpump
     modes:
       - "off"
