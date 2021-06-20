@@ -210,6 +210,9 @@ async def receiver(client):
                             state = hpfuncs.inttostate[int(data[13])]
                             power_state = state
                             await client.publish(config['maintopic'] + '/state/state', str(state), qos=1)
+                            if (state == "OFF"):
+                                # when power state is OFF, sent unit mode also as "off"
+                                await client.publish(config['maintopic'] + '/mode/state', "off", qos=1)
                         if(str(data[12]) == "160"):
                             fanmode = hpfuncs.inttofanmode[int(data[13])]
                             await client.publish(config['maintopic'] + '/fanmode/state', str(fanmode), qos=1)
