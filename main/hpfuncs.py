@@ -82,7 +82,7 @@ def fanControl(msg):
 
 def stateControl(msg):
     function_code = 128
-    message = msg.decode("utf-8")
+    message = msg if (type(msg) == str) else msg.decode("utf-8")
     try:
         function_value = statetoint[message]
         control_code = checksum(function_value,function_code)
