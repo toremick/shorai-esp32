@@ -78,18 +78,7 @@ def sub_cb(topic, msg, retained):
 # mode
     elif topic == topic_sub_mode:
         try:
-            message = msg.decode("utf-8")
-            # mode switched to off, power off unit
-            if (message == "off"):
-                values = hpfuncs.stateControl("OFF")
-            else:
-                if power_state != 'ON':
-                    # unit is OFF and some other mode was selected
-                    values = hpfuncs.stateControl("ON")
-                    values = values + hpfuncs.modeControl(msg)
-                else:
-                    # changed mode of running A/C
-                    values = hpfuncs.modeControl(msg)
+            values = hpfuncs.modeControl(msg)
             if values == False:
                 runwrite = False
         except Exception as e:
