@@ -1,9 +1,10 @@
 from main.ota_updater import OTAUpdater
 ssid = 'YOUR-SSID'
 password = 'YOUR-WIFI-PASSWORD'
+your_repo = 'https://github.com/toremick/toshiba-hp-esp32'
 
 def download_and_install_update_if_available():
-    o = OTAUpdater('https://github.com/toremick/toshiba-hp-esp32')
+    o = OTAUpdater(your_repo)
     o.check_for_update_to_install_during_next_reboot(ssid, password)
     o.download_and_install_update_if_available(ssid, password)
      
