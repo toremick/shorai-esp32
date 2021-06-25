@@ -8,10 +8,10 @@ i can help with
 
 
 ## Software install
-Instructions on how to install and download micropython firmware https://micropython.org/download/esp32/  
-When installed, you need to use thonny (www.thonny.org) or similiar to transfer files to the esp32.  
-All the files in the /main folder should be in a /main folder on the esp  
-config.py and main.py from examples needs to be edited and put on the root of the esp32.  
+* Instructions on how to install and download micropython firmware https://micropython.org/download/esp32/  
+* When installed, you need to use thonny (www.thonny.org) or similiar to transfer files to the esp32.  
+* All the files in the /main folder should be in a /main folder on the esp  
+* config.py and main.py from examples needs to be edited and put on the root of the esp32.  
 
 
 ### PCB Schematic
