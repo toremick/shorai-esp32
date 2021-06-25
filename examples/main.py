@@ -1,7 +1,8 @@
 from main.ota_updater import OTAUpdater
 ssid = 'YOUR-SSID'
 password = 'YOUR-WIFI-PASSWORD'
-#REPLACE THE REPO URL WITH YOUR OWN!!
+# REPLACE THE REPO URL WITH YOUR OWN!!
+# OR ELSE YOU WILL RECIEVE UPDATES FROM THIS REPO AT A REBOOT
 your_repo = 'https://github.com/toremick/shorai-esp32'
 
 def download_and_install_update_if_available():
