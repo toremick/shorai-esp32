@@ -1,6 +1,6 @@
 firmware  
 
-Install esptool.py on your pc.
+Install esptool.py on your pc. (https://cyberblogspot.com/how-to-install-esptool-on-windows-10/)
 
 put firmware.bin i c:\  
 
