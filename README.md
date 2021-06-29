@@ -19,6 +19,8 @@ i can help with
  `import installation`  
  `installation.install_now('YOUR-SSID', 'YOUR-WIFI-PASSWD')`  
 * this will install the files needed on your esp32 in /main folder
+* Refresh the file content  
+![Refresh thonny](images/refresh-thonny.png?raw=true "Refresh thonny")  
 * edit config.py to set up your network etc.
 
 
