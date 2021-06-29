@@ -15,8 +15,8 @@ i can help with
  * `esptool.py --chip esp32 --port COM3 --baud 460800 write_flash -z 0x1000 firmware.bin`
 
 * When installed, you need to use thonny (www.thonny.org) or similiar to connect to the esp32.  
-* at the repl run the following commands:
- `import installation`
+* at the repl run the following commands:  
+ `import installation`  
  `installation.install_now('YOUR-SSID', 'YOUR-WIFI-PASSWD')`  
 * this will install the files needed on your esp32 in /main folder
 * edit config.py to set up your network etc.
