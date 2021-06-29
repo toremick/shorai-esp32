@@ -9,13 +9,16 @@ i can help with
 
 ## Software install
 * Download firmware here: https://github.com/toremick/shorai-esp32/blob/main/firmware/firmware.bin
-* Instructions on how to install  https://micropython.org/download/esp32/  
+* Install esptool.py on your pc. (https://cyberblogspot.com/how-to-install-esptool-on-windows-10/)  
+* put firmware.bin i c:\  
+* open command prompt and run following from c:\  
+ * `esptool.py --chip esp32 --port COM3 --baud 460800 write_flash -z 0x1000 firmware.bin`
+
 * When installed, you need to use thonny (www.thonny.org) or similiar to connect to the esp32.  
 * at the repl run the following commands:
   * import installation
   * installation.install_now('YOUR-SSID', 'YOUR-WIFI-PASSWD')
 * this will install the files needed on your esp32 in /main folder
-* config.py and main.py from /main/examples needs to be put on the root of the esp32.  
 * edit config.py to set up your network etc.
 
 
