@@ -1,3 +1,5 @@
+<a href="https://www.buymeacoffee.com/toremick" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Beer" height="41" width="174"></a>
+
 # shorai-esp32
 This will work for Toshiba Shorai and Seiya
 
