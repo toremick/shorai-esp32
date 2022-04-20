@@ -5,7 +5,7 @@ This will work for Toshiba Shorai and Seiya
 
 This works great for me, but is at your own risk!
 
-Hit me up on (https://discord.gg/wF8QsGe74s) if there is anything
+Hit me up on (https://discord.gg/wYYFawvqfr) if there is anything
 i can help with
 
 
