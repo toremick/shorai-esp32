@@ -75,42 +75,42 @@ This can be skipped if you are solder the capacitor on the solder side laying fl
 If you have more than one device, please remember to change the *name*, *unique_id* and all the mqtt strings to have unique names. For each device replace the heatpump name with the unique 'maintopic' you have configured in the config.py of your ESP32 device. 
 
 ```
-climate:
-  - platform: mqtt
-    name: HeatPump
-    icon: mdi:air-conditioner
-    unique_id: toshibaheatpump
-    modes:
-      - "off"
-      - "auto"
-      - "cool"
-      - "heat"
-      - "dry"
-      - "fan_only"
-    swing_modes:
-      - "on"
-      - "off"
-    fan_modes:
-      - "quiet"
-      - "lvl_1"
-      - "lvl_2"
-      - "lvl_3"
-      - "lvl_4"
-      - "lvl_5"
-      - "auto"
-    power_command_topic: "heatpump/state/set"
-    power_state_topic: "heatpump/state/state"
-    mode_command_topic: "heatpump/mode/set"
-    mode_state_topic: "heatpump/mode/state"
-    current_temperature_topic: "heatpump/roomtemp"
-    temperature_command_topic: "heatpump/setpoint/set"
-    temperature_state_topic: "heatpump/setpoint/state"
-    fan_mode_command_topic: "heatpump/fanmode/set"
-    fan_mode_state_topic: "heatpump/fanmode/state"
-    swing_mode_command_topic: "heatpump/swingmode/set"
-    swing_mode_state_topic: "heatpump/swingmode/state"
-    temp_step: 1
-    precision: 1
+mqtt:
+  climate:
+    - name: HeatPump
+      icon: mdi:air-conditioner
+      unique_id: toshibaheatpump
+      modes:
+        - "off"
+        - "auto"
+        - "cool"
+        - "heat"
+        - "dry"
+        - "fan_only"
+      swing_modes:
+        - "on"
+        - "off"
+      fan_modes:
+        - "quiet"
+        - "lvl_1"
+        - "lvl_2"
+        - "lvl_3"
+        - "lvl_4"
+        - "lvl_5"
+        - "auto"
+      power_command_topic: "heatpump/state/set"
+      power_state_topic: "heatpump/state/state"
+      mode_command_topic: "heatpump/mode/set"
+      mode_state_topic: "heatpump/mode/state"
+      current_temperature_topic: "heatpump/roomtemp"
+      temperature_command_topic: "heatpump/setpoint/set"
+      temperature_state_topic: "heatpump/setpoint/state"
+      fan_mode_command_topic: "heatpump/fanmode/set"
+      fan_mode_state_topic: "heatpump/fanmode/state"
+      swing_mode_command_topic: "heatpump/swingmode/set"
+      swing_mode_state_topic: "heatpump/swingmode/state"
+      temp_step: 1
+      precision: 1
     
 ```
 
