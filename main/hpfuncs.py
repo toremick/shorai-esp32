@@ -12,7 +12,7 @@ inttomode = dict(map(reversed, modetoint.items()))
 fanmodetoint = {"quiet":49, "lvl_1": 50, "lvl_2":51, "lvl_3":52, "lvl_4":53, "lvl_5":54, "auto":65} 
 inttofanmode = dict(map(reversed, fanmodetoint.items()))
 
-swingtoint = {"off": 49, "on":65}
+swingtoint = {"off": 49, "on":65, "on-h":66, "on-vh":67}
 inttoswing = dict(map(reversed, swingtoint.items()))
 
 statetoint = {"ON":48, "OFF":49}
