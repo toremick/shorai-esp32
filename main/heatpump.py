@@ -11,7 +11,7 @@ from config import config
 import time
 from time import sleep
 import machine
-power_state = 'OFF'
+power_state = 'off'
 
 
 
@@ -186,8 +186,8 @@ async def receiver(client):
                             state = hpfuncs.inttostate[int(data[15])]
                             power_state = state
                             await client.publish(config['maintopic'] + '/state/state', str(state), qos=1)
-                            if (state == "OFF"):
-                                # when power state is OFF, sent unit mode also as "off"
+                            if (state == "off"):
+                                # when power state is off, sent unit mode also as "off"
                                 await client.publish(config['maintopic'] + '/mode/state', "off", qos=1)
                         if(str(data[14]) == "160"):
                             fanmode = hpfuncs.inttofanmode[int(data[15])]
@@ -198,7 +198,7 @@ async def receiver(client):
                         if(str(data[14]) == "176"):
                             mode = hpfuncs.inttomode[int(data[15])]
                             # report actual mode when unit is running or "off" when it's not
-                            reportedState = str(mode) if (power_state == "ON") else "off"
+                            reportedState = str(mode) if (power_state == "on") else "off"
                             await client.publish(config['maintopic'] + '/mode/state', reportedState, qos=1) 
                         if(str(data[14]) == "190"):
                             outdoortemp = int_to_signed(int(data[15]))
@@ -214,8 +214,8 @@ async def receiver(client):
                             state = hpfuncs.inttostate[int(data[13])]
                             power_state = state
                             await client.publish(config['maintopic'] + '/state/state', str(state), qos=1)
-                            if (state == "OFF"):
-                                # when power state is OFF, sent unit mode also as "off"
+                            if (state == "off"):
+                                # when power state is off, sent unit mode also as "off"
                                 await client.publish(config['maintopic'] + '/mode/state', "off", qos=1)
                         if(str(data[12]) == "160"):
                             fanmode = hpfuncs.inttofanmode[int(data[13])]
@@ -226,7 +226,7 @@ async def receiver(client):
                         if(str(data[12]) == "176"):
                             mode = hpfuncs.inttomode[int(data[13])]
                             # report actual mode when unit is running or "off" when it's not
-                            reportedState = str(mode) if (power_state == "ON") else "off"
+                            reportedState = str(mode) if (power_state == "on") else "off"
                             await client.publish(config['maintopic'] + '/mode/state', reportedState, qos=1) 
                         if(str(data[12]) == "190"):
                             outdoortemp = int_to_signed(int(data[13]))
