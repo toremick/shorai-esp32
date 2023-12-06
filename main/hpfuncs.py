@@ -15,7 +15,7 @@ inttofanmode = dict(map(reversed, fanmodetoint.items()))
 swingtoint = {"off": 49, "on":65, "on-h":66, "on-vh":67}
 inttoswing = dict(map(reversed, swingtoint.items()))
 
-statetoint = {"ON":48, "OFF":49}
+statetoint = {"on":48, "off":49}
 inttostate = dict(map(reversed, statetoint.items()))
 
 def checksum(msg,function):
