@@ -6,7 +6,7 @@ try:
 except Exception as e:
     print(e)
 
-modetoint = {"auto":65, "cool":66, "heat":67, "dry":68, "fan_only":69}
+modetoint = {"off": 49, "auto":65, "cool":66, "heat":67, "dry":68, "fan_only":69}
 inttomode = dict(map(reversed, modetoint.items()))
 
 fanmodetoint = {"quiet":49, "lvl_1": 50, "lvl_2":51, "lvl_3":52, "lvl_4":53, "lvl_5":54, "auto":65} 
@@ -15,7 +15,7 @@ inttofanmode = dict(map(reversed, fanmodetoint.items()))
 swingtoint = {"off": 49, "on":65, "on-h":66, "on-vh":67}
 inttoswing = dict(map(reversed, swingtoint.items()))
 
-statetoint = {"on":48, "off":49}
+statetoint = {"ON":48, "OFF":49}
 inttostate = dict(map(reversed, statetoint.items()))
 
 def checksum(msg,function):
@@ -57,10 +57,23 @@ def modeControl(msg):
     message = msg.decode("utf-8")
     try:
         function_value = modetoint[message]
+
+        control_code = checksum(48,128)
+        pwr_on_mylist = (2,0,3,16,0,0,7,1,48,1,0,2,128,48,control_code)
+        pwr_on_getlist = (2,0,3,16,0,0,6,1,48,1,0,1,128,52)
+        
         control_code = checksum(function_value,function_code)
         mylist = (2,0,3,16,0,0,7,1,48,1,0,2,function_code,function_value,control_code)
         getlist = (2,0,3,16,0,0,6,1,48,1,0,1,function_code,4)
-        myvalues = (mylist, getlist)
+        
+        myvalues = (pwr_on_mylist, pwr_on_getlist, mylist, getlist)
+  
+        if function_value == 49:
+            control_code = checksum(49,128)
+            mylist = (2,0,3,16,0,0,7,1,48,1,0,2,128,49,control_code)
+            getlist = (2,0,3,16,0,0,6,1,48,1,0,1,128,52)    
+            myvalues = (mylist, getlist)
+            
     except Exception as e:
         myvalues = False
     return myvalues
