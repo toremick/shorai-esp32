@@ -1,5 +1,7 @@
 from main import hpfuncs
+from main.ota_updater import OTAUpdater
 from machine import UART
+
 global uart
 uart = UART(1, 9600)
 uart.init(9600,bits = 8,parity = 0,stop = 1,rx = 32,tx = 33,timeout = 10, timeout_char=50)
@@ -147,8 +149,10 @@ async def firstrun(client):
     firstrun = False
     await asyncio.sleep(10)
     if firstrun == False:
-        await client.publish(config['maintopic'] + '/doinit', "firstrun")
-        hpfuncs.logprint("init firstrun")
+        ota = OTAUpdater(config['your_repo'])
+        current_version = ota.get_version('/main/')
+        await client.publish(config['maintopic'] + '/doinit', "firstrun version " + current_version )
+        hpfuncs.logprint("init firstrun version " + current_version)
         firstrun = True
     while True:
         await asyncio.sleep(60)
@@ -247,5 +251,6 @@ loop.create_task(mainloop(client))
 loop.create_task(receiver(client))
 loop.create_task(firstrun(client))
 loop.run_forever()
+
 
 

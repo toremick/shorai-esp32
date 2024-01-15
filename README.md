@@ -1,7 +1,7 @@
 <a href="https://www.buymeacoffee.com/toremick2" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 # shorai-esp32
-This will work for Toshiba Shorai and Seiya
+This will work for Toshiba Shorai, Seiya and Kazumi
 
 This works great for me, but is at your own risk!
 
@@ -89,6 +89,8 @@ mqtt:
         - "fan_only"
       swing_modes:
         - "on"
+#       - "on-h"     # uncomment only for model Kazumi
+#       - "on-vh"    # uncomment only for model Kazumi
         - "off"
       fan_modes:
         - "quiet"
